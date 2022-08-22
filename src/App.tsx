@@ -74,19 +74,19 @@ const App = () => {
     let value: any = 0;
     const remapVal = valueInput.filter(res => res !== "").map(res => Number(res))
 
-    if (param == "add") {
+    if (param === "add") {
       value = remapVal.reduce((acc, val) => acc + val);
     }
 
-    if (param == "subtract") {
+    if (param === "subtract") {
       value = remapVal.reduce((acc, val) => acc - val);
     }
 
-    if (param == "multiply") {
+    if (param === "multiply") {
       value = remapVal.reduce((acc, val) => acc * val);
     }
 
-    if (param == "divide") {
+    if (param === "divide") {
       value = remapVal.reduce((acc, val) => acc / val);
     }
 
