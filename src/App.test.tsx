@@ -3,13 +3,16 @@ import { render, screen } from '@testing-library/react';
 import App from './App';
 
 
-test('test render 3 input value', async () => {
+test('test render 3 input and checkbox value', async () => {
   render(<App />);
   const inputElement = await screen.queryAllByTestId("input-test")
   expect(inputElement).toHaveLength(3);
+
+  const checkElement = await screen.queryAllByTestId("check-test")
+  expect(checkElement).toHaveLength(3);
 })
 
-test('test render button operation value', async () => {
+test('test render 4 button operation', async () => {
   render(<App />);
   expect(await screen.queryAllByRole('button')).toHaveLength(4)
 })

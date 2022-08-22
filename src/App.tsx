@@ -119,6 +119,7 @@ const App = () => {
               variant="outlined"
             />
             <Checkbox
+               data-testid="check-test"
               checked={checkedInput.indexOf(index) !== -1}
               onChange={handleToggleChecked(index)}
             />
