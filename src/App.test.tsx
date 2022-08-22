@@ -1,4 +1,24 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react';
+import App from './App';
+
+
+test('test render 3 input value', async () => {
+  render(<App />);
+  const inputElement = await screen.queryAllByTestId("input-test")
+  expect(inputElement).toHaveLength(3);
+})
+
+test('test render button operation value', async () => {
+  render(<App />);
+  expect(await screen.queryAllByRole('button')).toHaveLength(4)
+})
+
+test('test render result value', async () => {
+  render(<App />);
+  const inputElement = screen.getByTestId("result-test")
+  expect(inputElement).toBeInTheDocument();
+})
 
 test('test 2 nilai perkalian', () => {
   const val = 2 * 2

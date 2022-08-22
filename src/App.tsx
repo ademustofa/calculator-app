@@ -107,8 +107,9 @@ const App = () => {
         alignItems="center"
       >
         {valueInput.map((res, index) => (
-          <Stack direction="row" spacing={2}>
+          <Stack key={index} direction="row" spacing={2}>
             <TextField
+              data-testid="input-test"
               disabled={checkedInput.indexOf(index) === -1}
               size="small"
               value={res}
@@ -126,6 +127,7 @@ const App = () => {
 
        
           <ButtonGroup
+            data-testid="button-test"
             disabled={checkedInput.length < 2}
             variant="contained"
             aria-label="outlined primary button group"
@@ -135,7 +137,7 @@ const App = () => {
             <Button onClick={handleSetOperator("subtract")}>-</Button>
             <Button onClick={handleSetOperator("divide")}>/</Button>
           </ButtonGroup>
-          <Typography variant="h6" id="tableTitle" component="div">
+          <Typography data-testid="result-test" variant="h6" id="tableTitle" component="div">
             Result : {result}
           </Typography>
       </Stack>
