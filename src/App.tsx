@@ -97,7 +97,7 @@ const App = () => {
     <>
         <Snackbar  anchorOrigin={{ vertical: "top", horizontal:"center" }} open={open} autoHideDuration={6000} onClose={handleClose}>
         <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
-          Please checked 2 input
+          Please checked at least 2 input
         </Alert>
       </Snackbar>
       <Stack
